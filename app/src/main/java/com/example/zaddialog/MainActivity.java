@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        int licznik = 0;
+
+        TextView textView = findViewById(R.id.text);
         Button but = findViewById(R.id.but1);
         but.setOnClickListener(view -> AlertDialog());
 
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MainActivity.this,"Dane zostały usunięte",Toast.LENGTH_LONG).show();
+                textView.setText("Dane usunięto: "+licznik+" razy");
 
             }
         });
