@@ -15,13 +15,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int licznik = 0;
+    private TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        int licznik = 0;
 
         TextView textView = findViewById(R.id.text);
         Button but = findViewById(R.id.but1);
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MainActivity.this,"Dane zostały usunięte",Toast.LENGTH_LONG).show();
+                licznik = licznik + 1;
                 textView.setText("Dane usunięto: "+licznik+" razy");
 
             }
