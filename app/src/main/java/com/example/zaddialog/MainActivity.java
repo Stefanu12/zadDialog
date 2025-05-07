@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        TextView textView = findViewById(R.id.text);
+        textView = findViewById(R.id.text);
         Button but = findViewById(R.id.but1);
         but.setOnClickListener(view -> AlertDialog());
 
